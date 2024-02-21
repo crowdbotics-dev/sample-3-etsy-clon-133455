@@ -1,31 +1,30 @@
-javascript;
-import React from 'react';
-import { SafeAreaView, View, Text, StyleSheet, Image, FlatList } from 'react-native';
+import React from "react";
+import { SafeAreaView, View, Text, StyleSheet, Image, FlatList } from "react-native";
 const ordersData = [{
-  id: '1',
-  orderNumber: 'Order #1234',
-  status: 'Processing',
-  date: 'April 10, 2023',
-  total: '$129.99'
+  id: "1",
+  orderNumber: "Order #1234",
+  status: "Processing",
+  date: "April 10, 2023",
+  total: "$129.99"
 }, {
-  id: '2',
-  orderNumber: 'Order #1235',
-  status: 'Shipped',
-  date: 'April 8, 2023',
-  total: '$89.99'
+  id: "2",
+  orderNumber: "Order #1235",
+  status: "Shipped",
+  date: "April 8, 2023",
+  total: "$89.99"
 }, {
-  id: '3',
-  orderNumber: 'Order #1236',
-  status: 'Delivered',
-  date: 'April 5, 2023',
-  total: '$49.99'
+  id: "3",
+  orderNumber: "Order #1236",
+  status: "Delivered",
+  date: "April 5, 2023",
+  total: "$49.99"
 }];
 
 const OrderItem = ({
   order
 }) => <View style={styles.orderItem}>
     <Image source={{
-    uri: 'https://tinyurl.com/42evm3m3'
+    uri: "https://tinyurl.com/42evm3m3"
   }} style={styles.image} />
     <View style={styles.orderDetails}>
       <Text style={styles.orderNumber}>{order.orderNumber}</Text>
@@ -47,18 +46,18 @@ const OrderManagementScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5'
+    backgroundColor: "#f5f5f5"
   },
   header: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginVertical: 20,
     marginLeft: 20
   },
   orderItem: {
-    flexDirection: 'row',
+    flexDirection: "row",
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     marginBottom: 10,
     marginHorizontal: 20,
     borderRadius: 10,
@@ -71,14 +70,14 @@ const styles = StyleSheet.create({
     marginRight: 20
   },
   orderDetails: {
-    justifyContent: 'space-around'
+    justifyContent: "space-around"
   },
   orderNumber: {
-    fontWeight: 'bold'
+    fontWeight: "bold"
   },
   total: {
-    fontWeight: 'bold',
-    color: '#333'
+    fontWeight: "bold",
+    color: "#333"
   }
 });
 export default OrderManagementScreen;
